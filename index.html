@@ -14,7 +14,8 @@
 <meta property="og:description" content="Chá cerimonial, mochi e taiyaki no térreo; oito gatos resgatados esperando cafuné e adoção no mezanino. Reserve sua sessão.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=Zen+Old+Mincho:wght@400;600;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=Zen+Old+Mincho:wght@400;600;900&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🍵%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="style.css">
 <script type="application/ld+json">
 {
@@ -80,6 +81,7 @@
 </script>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="icone-pata" viewBox="0 0 24 24"><g fill="currentColor"><path d="M12 12c-3 0-6 3.2-6 5.6 0 1.7 1.3 2.4 2.8 2.4 1.2 0 2-.5 3.2-.5s2 .5 3.2.5c1.5 0 2.8-.7 2.8-2.4C18 15.2 15 12 12 12z"/><ellipse cx="5.5" cy="10" rx="2" ry="2.6"/><ellipse cx="9.5" cy="6" rx="2" ry="2.8"/><ellipse cx="14.5" cy="6" rx="2" ry="2.8"/><ellipse cx="18.5" cy="10" rx="2" ry="2.6"/></g></symbol></svg>
 <a class="skip-link" href="#topo">Pular para o conteúdo</a>
 <canvas id="sakura" aria-hidden="true"></canvas>
 
@@ -98,7 +100,9 @@
 
 <main id="topo">
 
-<section class="hero">
+<section class="hero" id="hero">
+  <div class="hero-trilho">
+  <div class="hero-painel" id="painel-inicio">
   <div class="wrap">
     <div>
       <div class="selos">
@@ -110,6 +114,10 @@
       <div class="hero-acoes">
         <a class="btn" href="#reserva">Garantir minha vaga</a>
         <a class="btn btn-2" href="#cardapio">Ver o cardápio</a>
+      </div>
+      <div class="promo" role="note">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icone-pata"/></svg>
+        <span>Os 100 primeiros visitantes da Área dos Gatinhos ganham um <b>Certificado de Participação Exclusiva</b> + uma caneca de café da nossa cafeteria!</span>
       </div>
       <div class="hero-nums">
         <div><b>8</b><span>bigodes residentes, castrados, vacinados e de portas abertas para adoção</span></div>
@@ -140,6 +148,28 @@
       </svg>
     </div>
   </div>
+  </div>
+  <div class="hero-painel" id="painel-ofertas" inert aria-hidden="true">
+    <div class="wrap anuncios-wrap">
+      <div class="anuncios-cabeca">
+        <span class="jp" id="ofertas-jp">特典</span>
+        <h2 id="ofertas-titulo">Ofertas para você</h2>
+        <p id="ofertas-sub"></p>
+        <p class="anuncios-nota">Ofertas válidas mediante reserva e confirmação da equipe pelo WhatsApp.</p>
+      </div>
+      <div class="carrossel" role="region" aria-roledescription="carrossel" aria-label="Ofertas para você">
+        <div class="car-trilho" id="car-trilho" tabindex="0"></div>
+        <div class="car-ctrl">
+          <button class="car-btn" id="car-ant" type="button" aria-label="Anúncio anterior">‹</button>
+          <div class="car-pontos" id="car-pontos"></div>
+          <button class="car-btn" id="car-prox" type="button" aria-label="Próximo anúncio">›</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <button class="seta-hero seta-ant" id="seta-ant" type="button" aria-label="Voltar para o início" hidden><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg></button>
+  <button class="seta-hero seta-prox" id="seta-prox" type="button" aria-label="Ver minhas ofertas" title="Ver minhas ofertas" hidden><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button>
 </section>
 
 <section class="agita">
@@ -269,6 +299,10 @@
       <span class="jp">ご予約</span>
       <h2>Reserve seu horário na sala dos gatos</h2>
       <p>Sessões de 40 minutinhos, no máximo 6 pessoas por vez — assim ninguém precisa dividir colo. A reserva custa R$ 35 por pessoa e vira crédito integral no seu lanche, então no fim das contas você só paga o matcha. Sábados e domingos costumam esgotar antes da sexta.</p>
+      <div class="promo" role="note">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icone-pata"/></svg>
+        <span>Os 100 primeiros visitantes da Área dos Gatinhos ganham um <b>Certificado de Participação Exclusiva</b> + uma caneca de café da nossa cafeteria!</span>
+      </div>
       <div class="selos">
         <span class="badge badge-urgente">Vagas limitadas · máx. 6 pessoas</span>
         <span class="badge">Crédito 100% revertido</span>
@@ -307,8 +341,21 @@
                 <option>4 pessoas</option><option>5 pessoas</option><option>6 pessoas</option>
               </select>
             </div>
+            <div class="campo full">
+              <label for="origem">Como você soube da Neko Matcha?</label>
+              <select id="origem" name="origem" required>
+                <option value="">Escolher</option>
+                <option>Instagram</option><option>Facebook</option><option>TikTok</option>
+                <option>Amigos</option><option>Eventos</option><option>Outros</option>
+              </select>
+            </div>
           </div>
-          <button class="btn" type="submit">Garantir meu horário</button>
+          <input type="hidden" id="utm_source" name="utm_source">
+          <input type="hidden" id="utm_medium" name="utm_medium">
+          <input type="hidden" id="utm_campaign" name="utm_campaign">
+          <input type="hidden" id="utm_term" name="utm_term">
+          <input type="hidden" id="utm_content" name="utm_content">
+          <button class="btn" type="submit" id="btn-reserva"><span class="btn-rotulo">Garantir meu horário</span></button>
           <p class="aviso">Crianças a partir de 8 anos, sempre acompanhadas. Sem sapatos na sala — é regra da casa, os gatos agradecem.</p>
         </form>
         <div id="confirma" class="confirma" hidden role="status"></div>
@@ -438,6 +485,36 @@
   </svg>
 </a>
 
+<template id="tpl-certificado">
+  <div class="cert">
+    <div class="cert-borda"></div>
+    <div class="cert-pata a"></div>
+    <div class="cert-pata b"></div>
+    <div class="cert-pata c"></div>
+    <div class="cert-pata d"></div>
+    <div class="cert-conteudo">
+      <svg class="cert-gato" viewBox="0 0 64 64" aria-hidden="true"><path d="M13 29 11 9l15 8c4-1 8-1 12 0l15-8-2 20c3 4 5 8 5 12 0 12-12 20-26 20S6 53 6 41c0-4 2-8 5-12z" fill="#FBF8F0" stroke="#4F6B3A" stroke-width="3" stroke-linejoin="round"/><circle cx="23" cy="39" r="2.6" fill="#4F6B3A"/><circle cx="41" cy="39" r="2.6" fill="#4F6B3A"/><path d="M29 45q3 3 6 0M32 43v2.5" fill="none" stroke="#4F6B3A" stroke-width="2.4" stroke-linecap="round"/><path d="M14 43 4 41M14 47l-9 4M50 43l10-2M50 47l9 4" stroke="#4F6B3A" stroke-width="1.8" stroke-linecap="round"/></svg>
+      <div class="cert-marca">NEKO MATCHA</div>
+      <div class="cert-titulo">CERTIFICADO</div>
+      <div class="cert-sub">de participação exclusiva</div>
+      <div class="cert-texto p1">Certificamos que</div>
+      <div class="cert-nome" data-cert-nome></div>
+      <div class="cert-rotulo">nome do participante</div>
+      <div class="cert-texto p2">está entre os</div>
+      <div class="cert-destaque">100 primeiros</div>
+      <div class="cert-texto">visitantes da</div>
+      <div class="cert-lugar">Área dos Gatinhos</div>
+    </div>
+    <div class="cert-assina">Neko Matcha</div>
+    <div class="cert-brinde">
+      <svg viewBox="0 0 56 56" aria-hidden="true"><path d="M16 12c-3-3 3-5 0-9M24 12c-3-3 3-5 0-9" fill="none" stroke="#9DB87C" stroke-width="2.4" stroke-linecap="round"/><path d="M8 20h30v16a12 12 0 0 1-12 12h-6A12 12 0 0 1 8 36z" fill="#FBF8F0" stroke="#4F6B3A" stroke-width="3.2"/><path d="M38 25h5a7 7 0 0 1 0 14h-5" fill="none" stroke="#4F6B3A" stroke-width="3.2"/><circle cx="19" cy="31" r="1.7" fill="#4F6B3A"/><circle cx="28" cy="31" r="1.7" fill="#4F6B3A"/><path d="M21 36q2 2 5 0" fill="none" stroke="#4F6B3A" stroke-width="2" stroke-linecap="round"/></svg>
+      <div><strong>BRINDE ESPECIAL:</strong><span>Você também recebe de brinde uma caneca de café da nossa cafeteria. Retire no balcão!</span></div>
+    </div>
+  </div>
+</template>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
 <script src="script.js"></script>
 </body>
 </html>
